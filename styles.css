@@ -1,0 +1,119 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a2e;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Fondo de nieve */
+  .snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  .snowflake {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    font-size: 1.5em;
+    color: white;
+    animation: fall 10s linear infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+      transform: translateX(100vw) translateY(100vh);
+    }
+  }
+  
+  /* Diseño de la tarjeta */
+  .card {
+    background: linear-gradient(145deg, #e63946, #f1faee);
+    color: #1a1a2e;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  .card h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .card p {
+    margin: 15px 0;
+    font-size: 1.1em;
+  }
+  
+  .card .signature {
+    font-style: italic;
+    font-weight: bold;
+    color: #e63946;
+  }
+  
+  button {
+    margin-top: 20px;
+    background-color: #1d3557;
+    color: #f1faee;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #457b9d;
+    transform: scale(1.1);
+  }
+  
+  /* Sorpresa */
+  .surprise-image {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .surprise-image:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+}
+  }  
